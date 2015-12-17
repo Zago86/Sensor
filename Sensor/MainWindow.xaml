@@ -1,0 +1,63 @@
+﻿<Controls:MetroWindow x:Name="FinestraPrincipale" x:Class="Sensor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sensor"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="" Height="350" Width="525">
+    <Grid Background="White" OpacityMask="#FFFF0057">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="217*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="378*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BT_StartComunication" Content="Start Comunication" Margin="0" Style="{DynamicResource SquareButtonStyle}" Click="BT_StartComunication_Click"/>
+        <Button x:Name="BT_StopComunication" Content="Stop Comunication" Margin="0" Grid.Row="1" FontWeight="Bold" FontSize="12" Controls:ControlsHelper.ContentCharacterCasing="Lower" Style="{DynamicResource SquareButtonStyle}" Click="BT_StopComunication_Click" IsEnabled="False"/>
+        <Grid Grid.Column="1" Margin="0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <CheckBox x:Name="CB_System_1" Content="System_1" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <CheckBox x:Name="CB_System_2" Content="System_2" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center"/>
+            <CheckBox x:Name="CB_System_3" Content="System_3" Grid.Column="2" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center"/>
+            <Grid Margin="0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="tbTX_System_1" TextWrapping="Wrap" Text="Tx" BorderThickness="0" TextAlignment="Center" FontWeight="Bold" FontSize="16" />
+                <TextBox x:Name="tbRX_System_1" Grid.Column="1" Margin="0" TextWrapping="Wrap" Text="Rx" FontSize="16" FontWeight="Bold" TextAlignment="Center" BorderThickness="0" />
+            </Grid>
+            <Grid Grid.Column="1" Margin="0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="tbTX_System_2" Margin="0" TextWrapping="Wrap" Text="Tx" BorderThickness="0" FontSize="16" FontWeight="Bold" TextAlignment="Center"/>
+                <TextBox x:Name="tbRX_System_2" Grid.Column="1" Margin="0" TextWrapping="Wrap" Text="Rx" BorderThickness="0" FontSize="16" FontWeight="Bold" TextAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Column="2" Margin="0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="tbTX_System_3" Margin="0" TextWrapping="Wrap" Text="Tx" BorderThickness="0" FontSize="16" FontWeight="Bold" TextAlignment="Center"/>
+                <TextBox x:Name="tbRX_System_3" Grid.Column="1" Margin="0" TextWrapping="Wrap" Text="Rx" BorderThickness="0" FontSize="16" FontWeight="Bold" TextAlignment="Center"/>
+            </Grid>
+        </Grid>
+        <TextBox x:Name="txDB_Connection" Margin="0" Grid.Row="2" TextWrapping="Wrap" Text="Connection Database" FontWeight="Bold" TextAlignment="Center" BorderThickness="2" BorderBrush="Black" Background="Red"/>
+    </Grid>
+</Controls:MetroWindow>
